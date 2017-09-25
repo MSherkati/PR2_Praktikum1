@@ -11,8 +11,6 @@ public class WebShop
 {
     ArrayList<Customer> _customer;
 
-  
-
     public WebShop()
     {
         _customer = new ArrayList<Customer>();
@@ -55,14 +53,34 @@ public class WebShop
         {
             Comparator<Customer> comp = new IDComparator();
             Collections.sort(_customer, comp);
-            System.out.println(_customer);
-            System.out.println();
+
+            Iterator<Customer> iter = _customer.iterator();
+            while (iter.hasNext())
+            {
+                Customer cust = (Customer) iter.next();
+                System.out.println("Firstname: " + cust.get_vorname()
+                        + " Lastname: " + cust.get_nachname() + " ID: "
+                        + cust.get_ID());
+                // System.out.println(_customer);
+                // System.out.println();
+            }
         }
         else
         {
             Comparator<Customer> comp = new NameComperator();
             Collections.sort(_customer, comp);
-            System.out.println(_customer);
+
+            Iterator<Customer> iter = _customer.iterator();
+            while (iter.hasNext())
+            {
+                Customer cust = (Customer) iter.next();
+                System.out.println("Firstname: " + cust.get_vorname()
+                        + " Lastname: " + cust.get_nachname() + " ID: "
+                        + cust.get_ID());
+
+            }
+
+            // System.out.println(_customer);
         }
     }
 

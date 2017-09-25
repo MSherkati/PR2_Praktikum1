@@ -6,7 +6,7 @@ public class Main
     {
 
         WebShop webShop = new WebShop();
-        
+
         webShop.addCustomer("Jogi", "Löw");
         webShop.addCustomer("Uli", "Hoeneß");
         webShop.addCustomer("Hansi", "Flick");
@@ -14,16 +14,19 @@ public class Main
         webShop.addCustomer("Hansi", "Flick");
         webShop.addCustomer("Mehmet", "Scholl");
         webShop.addCustomer("Marco", "Reus");
-        
+
         webShop.printListOfCustomers(
                 SortingCriterion.SORT_BY_LASTNAME_FIRSTNAME);
-        
+        System.out.println();
+
         webShop.printListOfCustomers(SortingCriterion.SORT_BY_ID);
-        
+        System.out.println();
+
         webShop.removeCustomer("Mehmet", "Scholl");
         webShop.removeCustomer("Hansi", "Flick");
-        
+
         webShop.printListOfCustomers(SortingCriterion.SORT_BY_ID);
+        System.out.println();
 
     }
 
